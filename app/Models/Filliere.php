@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Filliere extends Model
 {
-    protected $fillable = ['nom_filiere'];
+    protected $fillable = ['titre', 'description'];
 
     public function groupes()
     {

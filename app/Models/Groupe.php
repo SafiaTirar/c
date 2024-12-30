@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Groupe extends Model
 {
-    protected $fillable = ['nom', 'effectif', 'filiere_id'];
+    protected $fillable = ['libelle', 'filliere_id'];
 
     public function filiere()
     {
@@ -21,6 +21,10 @@ class Groupe extends Model
     public function seances()
     {
         return $this->hasMany(Seance::class);
+    }
+
+    public function users(){
+        return $this->belongsToMany(User::class);
     }
 }
 

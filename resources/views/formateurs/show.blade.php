@@ -28,6 +28,27 @@
 
       {{-- liste des groupes --}}
 
+      <h2><span>Liste des groupes de {{$formateur->nom . ' '. $formateur->prenom}}</span></h2>
+
+      <table class="table table-bordered">
+            <thead>
+                  <tr>
+                        <th>libelle</th>
+                        <th>Annee formation</th>
+                        <th>Effectif Stagiaire</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  @foreach ($formateur->groupes as $groupe )
+                        <tr>
+                              <td>{{$groupe->libelle}}</td>
+                              <td>{{$groupe->pivot->annee_formation}}</td>      
+                              <td>{{count($groupe->stagiaires)}}</td>      
+                        </tr>
+                  @endforeach
+            </tbody>
+      </table>
+
      
 </div>
 @endsection

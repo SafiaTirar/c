@@ -51,6 +51,8 @@
                                           <li><a href="/">Home</a></li>
                                         
                                           <li><a href="{{route('formateurs.index')}}">Formateurs</a></li>
+                                          <li><a href="{{route('filieres.index')}}">Filieres</a></li>
+                                          <li><a href="{{route('groupes.index')}}">Groupes</a></li>
                                          
                                     </ul>
                               </div>

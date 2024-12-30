@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('groupes', function (Blueprint $table) {
             $table->id();
+            $table->string('libelle',100);
+            $table->foreignId('filliere_id')->constraint()->cascadeOnDelete();
             $table->timestamps();
         });
     }
